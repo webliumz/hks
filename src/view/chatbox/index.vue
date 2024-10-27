@@ -111,7 +111,7 @@
                   <div>
                     <p>{{ qIndex + 1 }}. {{ question.text }}</p>
                     <div v-for="(option, oIndex) in question.options" :key="oIndex">
-                      <input :type="question.type" :name="'question' + qIndex" :value="option.value"
+                      <input :type="question.type" :name="'question' + qIndex" 
                         v-model="answers[qIndex]" @change="updateAnswer(qIndex, option.value)">
                       <label>{{ option.text }}</label><br>
                     </div>
@@ -652,7 +652,7 @@ export default {
 .chat-list {
   padding: 20px;
   background-color: #f8f8f8;
-  width: 1200px;
+  width: 1100px;
 }
 
 .chat-item {
